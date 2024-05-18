@@ -1,60 +1,43 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Responsive Drop-down Menu Bar</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="file:///E:/fontawesome/css/all.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="file:///E:/jquery.js"></script>
-  </head>
-  <body>
-    <nav>
-      <div class="logo">PMD CLASSES</div>
-      <label for="btn" class="icon">
-        <span class="fa fa-bars"></span>
-      </label>
-      <input type="checkbox" id="btn">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li>
-          <label for="btn-1" class="show">Features +</label>
-          <a href="#">Education Boards</a>
-          <input type="checkbox" id="btn-1">
-          <ul>
-            <li><a href="#">National Institute of Open Schooling</a></li>
-            <li><a href="#">Board of School Education Hubli, Karnataka</a></li>
-          </ul>
-        </li>
-        <li>
-          <label for="btn-2" class="show">Services +</label>
-          <a href="#">Universities</a>
-          <input type="checkbox" id="btn-2">
-          <ul>
-            <li><a href="#">IGNOU</a></li>
-            <li><a href="#">DU SOL</a></li>
-              <label for="btn-3" class="show">More +</label>
-              <a href="#">More <span class="fa fa-plus"></span></a>
-              <input type="checkbox" id="btn-3">
-              <ul>
-                <li><a href="#">Shubhbharti</a></li>
-                <li><a href="#">C.U., Koderma</a></li>
-                <li><a href="#">C.C.S.U., Meerut</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="Gallery.html">Gallery</a></li>
-        <li><a href="#">About US</a></li>
-        <li><a href="#">Contact US</a></li>
-      </ul>
-    </nav>
-    <script>
-      $('.icon').click(function(){
-        $('span').toggleClass("cancel");
-      });
-    </script>
-
-  </body>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<style type="text/css">
+*{
+	text-decoration: none;
+}
+.navbar{
+	background: brown; font-family: calibri; padding-right: 15px; padding-left: 15px;
+}
+.navdiv{
+	display: flex; align-items: center; justify-content: space-between
+}
+.logo a{
+font-size: 35px; font-weight: 600; color: white;
+}
+li{
+list-style: none; display: inline-block;
+}
+li a{
+color: white; font-size: 18px; font-weight: bold;margin-right: 25px;
+}
+</style>
+</head>
+<body>
+<nav class="navbar">
+	<div class="navdiv">
+	<div class="logo"><a href="#">PMD CLASSES</a> </div>
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="#">Schools</a></li>
+		<li><a href="#">Universities</a></li>
+		<li><a href="Gallery.html">Gallery</a></li>
+		<li><a href="#">Contact Us</a></li>
+		<li><a href="#">About Us</a></li>
+	</ul>
+</div>
+</nav>
+</body>
 </html>
