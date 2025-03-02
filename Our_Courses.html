@@ -3,25 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PMD Classes: Courses</title>
+    <title>Our Courses - PMD Classes</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-	
-	<div include-html="header.html" id="header_file"></div>
 <body>
-    <center><h1>Select any one option</h1></center>
-    <hr>
-    <center>
-        <a href="Computer_Courses.html">
-		<img src="img/Our_Courses/Computer_Courses.jpg" title="Computer Course Details" alt="Link not found" height="400px" width="400px">
-	</a>
-        <a href="Academic_Courses.html">
-        	<img src="img/Our_Courses/Academic_Courses.jpg" title="Academic Course Details" alt="Link not found" height="400px" width="400px">
-        </a>
-    </center>
-	<div include-html="footer.html" id="footer_file"></div>
 
-<script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/include-html.min.js"></script>
-	
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">PMD Classes</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Courses Section -->
+    <section class="courses">
+        <h2>Our Courses</h2>
+        <div class="course-container">
+            
+            <!-- Course 1 -->
+            <div class="course">
+                <img src="images/excel.jpg" alt="Excel & VBA">
+                <h3>Advanced Excel & VBA</h3>
+                <p>✔️ Data Analysis, Formulas, Macros, VBA Automation</p>
+                <p><strong>Duration:</strong> 2 Months</p>
+                <p><strong>Fees:</strong> ₹8,000</p>
+            </div>
+
+            <!-- Course 2 -->
+            <div class="course">
+                <img src="images/design.jpg" alt="Graphic Design">
+                <h3>Photoshop & Illustrator</h3>
+                <p>✔️ Logo Design, Photo Editing, Vector Graphics</p>
+                <p><strong>Duration:</strong> 2 Months</p>
+                <p><strong>Fees:</strong> ₹9,500</p>
+            </div>
+
+            <!-- Course 3 -->
+            <div class="course">
+                <img src="images/webdesign.jpg" alt="Web Design">
+                <h3>Web Designing</h3>
+                <p>✔️ HTML, CSS, JavaScript, Responsive Design</p>
+                <p><strong>Duration:</strong> 3 Months</p>
+                <p><strong>Fees:</strong> ₹12,000</p>
+            </div>
+
+            <!-- Course 4 -->
+            <div class="course">
+                <img src="images/tally.jpg" alt="Tally & Accounting">
+                <h3>Tally & Accounting</h3>
+                <p>✔️ GST, Payroll, Financial Statements</p>
+                <p><strong>Duration:</strong> 1.5 Months</p>
+                <p><strong>Fees:</strong> ₹7,000</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 PMD Classes. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
