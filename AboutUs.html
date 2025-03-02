@@ -3,53 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - PMD Classes</title>
+    <title>Contact Us - PMD Classes</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            text-align: justify;
-        }
-        h1, h2 {
-            text-align: center;
-            color: #333;
-        }
-        .highlight {
-            color: #007bff;
-            font-weight: bold;
-        }
-        .contact {
-            text-align: center;
-            margin-top: 20px;
-        }
+        body { font-family: Arial, sans-serif; margin: 20px; padding: 0; text-align: center; }
+        .container { max-width: 600px; margin: auto; text-align: justify; }
+        h1 { text-align: center; color: #333; }
+        label { font-weight: bold; display: block; margin-top: 10px; }
+        input, textarea { width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px; }
+        button { background-color: #007bff; color: white; padding: 10px; border: none; cursor: pointer; width: 100%; border-radius: 5px; margin-top: 10px; }
+        button:hover { background-color: #0056b3; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>About PMD Classes</h1>
-        <p><span class="highlight">PMD Classes</span> ek leading educational institute hai jo <b>admission consultation, student path guidance, study materials, academic coaching, aur computer professional courses</b> provide karta hai. Hamaara uddeshya students ko knowledge aur skills se empower karna hai.</p>
+        <h1>Contact Us</h1>
+        <form id="contactForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" required>
 
-        <h2>Our Mission & Vision</h2>
-        <p>Humara mission har student ko high-quality education provide karna hai, jisse wo apna career aur future sudhar sakein.</p>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" required>
 
-        <h2>Our Courses & Services</h2>
-        <p>Hum <b>school & college exams ki coaching</b> dete hain aur professional courses jaise ki <b>VBA, Photoshop, Illustrator, InDesign, Advanced Excel, Tally, aur Web Design</b> bhi sikhate hain.</p>
+            <label for="message">Your Message:</label>
+            <textarea id="message" rows="5" required></textarea>
 
-        <h2>Why Choose Us?</h2>
-        <ul>
-            <li>Experienced Faculty</li>
-            <li>Industry-Oriented Courses</li>
-            <li>Affordable Fees</li>
-            <li>Certification After Completion</li>
-        </ul>
-
-        <h2>Contact Us</h2>
-        <p class="contact"><b>Location:</b> Badarpur, New Delhi <br> <b>Phone:</b> 9876543210 <br> <b>Email:</b> info@pmdclasses.com</p>
+            <button type="button" onclick="submitForm()">Send Message</button>
+        </form>
     </div>
+
+    <script>
+        function submitForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            // 1️⃣ WhatsApp Message Send
+            var whatsappUrl = "https://wa.me/918285555342?text="
+                + "Name: " + encodeURIComponent(name) + "%0A"
+                + "Email: " + encodeURIComponent(email) + "%0A"
+                + "Message: " + encodeURIComponent(message);
+            window.open(whatsappUrl, "_blank");
+
+            // 2️⃣ Form Data Send to PHP Script
+            var formData = new FormData();
+            formData.append("name", name);
+            formData.append("email", email);
+            formData.append("message", message);
+
+            fetch("contact-form-handler.php", {
+                method: "POST",
+                body: formData
+            }).then(response => response.text())
+            .then(data => {
+                alert("Your message has been sent successfully!");
+                window.location.href = "thank-you.html";
+            }).catch(error => {
+                alert("Error sending message!");
+            });
+        }
+    </script>
 </body>
 </html>
