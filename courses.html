@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMD Classes - Computer Courses & Certification</title>
+    <style>
+        /* CSS Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #f8f9fa;
+        }
+
+        .header {
+            background: linear-gradient(45deg, #2c3e50, #2980b9);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .course-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 20px;
+        }
+
+        .course-category {
+            margin: 2rem 0;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .course-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .course-card h3 {
+            color: #2980b9;
+            margin-bottom: 10px;
+        }
+
+        .course-card p {
+            margin: 8px 0;
+            color: #666;
+        }
+
+        .fee-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            background: white;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+
+        .fee-table th, .fee-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .fee-table th {
+            background: #2c3e50;
+            color: white;
+        }
+
+        .badge {
+            background: #27ae60;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-left: 10px;
+        }
+         .enroll-btn
+        {
+		            background: #27ae60;
+		            color: white;
+		            padding: 10px 25px;
+		            border: none;
+		            border-radius: 25px;
+		            cursor: pointer;
+		            margin-top: 15px;
+		            display: inline-block;
+		            transition: 0.3s;
+		 }
+
+		  .enroll-btn:hover
+		 {
+		            background: #219a52;
+		            transform: scale(1.05);
+         }
+    </style>
+<link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="header-navbar.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <h1>PMD Classes</h1>
+        <p>Your Gateway to Academic Success</p>
+    </header>
+<!-- Navigation -->
+ <nav class="navbar">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="#results">Results</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <button class="login-btn" onclick="location.href='login.html'">Student Login</button>
+</nav>
+    <header class="header">
+        <h1>Professional Computer Courses</h1>
+        <p>Industry-Ready Certification Programs</p>
+    </header>
+
+    <div class="course-container">
+        <!-- Diploma Courses -->
+        <div class="course-category">
+            <h2>Diploma Programs <span class="badge">6-12 Months</span></h2>
+            <div class="course-grid">
+                <div class="course-card">
+                    <h3>Advance Diploma in Computer Applications</h3>
+                    <p>Duration: 12 Months</p>
+                    <p>Modules: Office, Tally, Web Design, Programming</p>
+                </div>
+
+                <div class="course-card">
+                    <h3>Diploma in Computer Applications (DCA)</h3>
+                    <p>Duration: 6 Months</p>
+                    <p>Includes: MS Office, Internet, Basic Programming</p>
+                </div>
+
+                <div class="course-card">
+                    <h3>Diploma in Microsoft Office</h3>
+                    <p>Duration: 3 Months</p>
+                    <p>Advanced Excel, Word, PowerPoint</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certification Courses -->
+        <div class="course-category">
+            <h2>Certification Programs <span class="badge">1-3 Months</span></h2>
+            <div class="course-grid">
+                <div class="course-card">
+                    <h3>Tally Prime with GST</h3>
+                    <p>Duration: 2 Months</p>
+                    <p>GST Filing, Inventory Management</p>
+                </div>
+
+                <div class="course-card">
+                    <h3>Graphic Design Masterclass</h3>
+                    <p>Tools: Photoshop, Illustrator, CorelDRAW</p>
+                    <p>Duration: 3 Months</p>
+                </div>
+
+                <div class="course-card">
+                    <h3>Web Design & Development</h3>
+                    <p>HTML5, CSS3, JavaScript Basics</p>
+                    <p>Duration: 3 Months</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Short Term Courses -->
+        <div class="course-category">
+            <h2>Short Term Courses <span class="badge">15-45 Days</span></h2>
+            <div class="course-grid">
+                <div class="course-card">
+                    <h3>Certificate in Advance Excel</h3>
+                    <p>VBA, Pivot Tables, Dashboards</p>
+                    <p>Duration: 1 Month</p>
+                </div>
+
+                <div class="course-card">
+                    <h3>Python Programming Basics</h3>
+                    <p>Data Types, Loops, Functions</p>
+                    <p>Duration: 45 Days</p>
+                </div>
+
+                <div class="course-card">
+                    <h3>Desktop Publishing (DTP)</h3>
+                    <p>CorelDRAW, PageMaker</p>
+                    <p>Duration: 1 Month</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fee Structure Table -->
+        <h2 style="margin-top:40px;">Course Fee Structure</h2>
+        <table class="fee-table">
+            <tr>
+                <th>Course Name</th>
+                <th>Duration</th>
+                <th>Fees</th>
+                <th>Enroll Now</th>
+            </tr>
+            <tr>
+                <td>Advance Diploma in Computer Applications</td>
+                <td>12 Months</td>
+                <td>₹25,000</td>
+                <td><button class="enroll-btn" onclick="showEnrollForm('DCA')">Enroll Now</button></td>
+            </tr>
+            <tr>
+                <td>Tally Prime with GST</td>
+                <td>2 Months</td>
+                <td>₹8,500</td>
+                <td><button class="enroll-btn" onclick="showEnrollForm('DCA')">Enroll Now</button></td>
+            </tr>
+            <tr>
+                <td>Graphic Design Masterclass</td>
+                <td>3 Months</td>
+                <td>₹15,000</td>
+                <td><button class="enroll-btn" onclick="showEnrollForm('DCA')">Enroll Now</button></td>
+            </tr>
+            <tr>
+                <td>Web Design & Development</td>
+                <td>3 Months</td>
+                <td>₹12,000</td>
+                <td><button class="enroll-btn" onclick="showEnrollForm('DCA')">Enroll Now</button></td>
+            </tr>
+            <tr>
+                <td>Certificate in Advance Excel</td>
+                <td>1 Month</td>
+                <td>₹4,500</td>
+                <td><button class="enroll-btn" onclick="showEnrollForm('DCA')">Enroll Now</button></td>
+            </tr>
+            <tr>
+                <td>Python Programming Basics</td>
+                <td>45 Days</td>
+                <td>₹6,000</td>
+                <td><button class="enroll-btn" onclick="showEnrollForm('DCA')">Enroll Now</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        // Add hover effect to table rows
+        document.querySelectorAll('.fee-table tr').forEach(row => {
+            row.addEventListener('mouseover', () => {
+                row.style.backgroundColor = '#f5f5f5';
+            });
+            row.addEventListener('mouseout', () => {
+                row.style.backgroundColor = '';
+            });
+        });
+    </script>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>© 2024 PMD Classes. All rights reserved.</p>
+        <p>📞 8285555342 | 📍 Badarpur, New Delhi</p>
+        <div style="margin-top:15px;">
+            <a href="#terms">Terms</a> |
+            <a href="#privacy">Privacy Policy</a> |
+            <a href="#faq">FAQ</a>
+        </div>
+    </footer>
+</body>
+</html>
