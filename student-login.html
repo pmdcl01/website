@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Login - PMD Classes</title>
+  <meta charset="UTF-8">
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+  <script src="js/student-dashboard-firebase.js"></script>
+  <script src="js/student-login-script.js" defer></script>
+</head>
+<body>
+  <h2>Student Login</h2>
+  <form id="loginForm">
+    <input type="text" id="userId" placeholder="User ID" required><br>
+    <input type="text" id="mobile" placeholder="Mobile Number" required><br>
+    <button type="submit">Login</button>
+  </form>
+  <p id="error"></p>
+</body>
+</html>
