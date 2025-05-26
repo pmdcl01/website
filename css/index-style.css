@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #f4f4f4;
+  line-height: 1.6;
+}
+
+.ad-banner {
+  background: url('https://images.unsplash.com/photo-1580894908361-967195033215') center/cover;
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: 15px;
+  margin: 2rem 1rem;
+  position: relative;
+}
+
+.ad-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+.ad-banner h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.ad-banner button {
+  background: #27ae60;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin: 2rem 0;
+}
+
+.course-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .login-btn {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .ad-banner {
+    margin: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .ad-banner h2 {
+    font-size: 1.5rem;
+  }
+}
